@@ -1,0 +1,42 @@
+<header class="bg-primary p-2 text-white">
+    <div class="row">   
+        <div class="col-md-6">
+            <h2>Create-Post</h2>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-success" [routerLink]="['/create-post']" >Create</button>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">title</th>
+                <th scope="col">description</th>
+                <th scope="col">thumbnail</th>
+                <th scope="col">author</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let post of posts">
+                <th scope="row">{{post.id}}</th>
+                <td>{{post.title}}</td>
+                <td>{{post.Description}}</td>
+                <td>{{post.Thumbnail}}</td>
+                <td>
+                    <img [src]="post.author" alt="" style="width:100px">
+                </td>
+                <td>
+                    <button [routerLink]= "['/update-post',post.id]" class="btn btn-primary m-1">Update</button>
+                    <button (click)="deletepost(post.id)" class="btn btn-danger m-1">Delete</button>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+    </div>
+</div>

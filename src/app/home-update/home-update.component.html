@@ -1,0 +1,32 @@
+<div class="container" style="background-color: #D5D9DD;">
+    <div class="bg-success p-2 text-white">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Update-Post</h2>
+            </div>
+        </div>
+    </div>
+        <div class="form-group">
+          <label>Title</label>
+          <input [(ngModel)]="post.title" type="text" class="form-control" >
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea [(ngModel)]="post.Description" cols="120" rows="10"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Thumbnail</label>   
+            <input [(ngModel)]="post.Thumbnail" type="text" class="form-control" >
+          </div>
+
+          <div class="form-group">
+            <label>Author</label>    
+            <input [(ngModel)]="post.author" type="text" class="form-control" >
+          </div>
+        <button (click)="onsubmit()" type="button" class="btn btn-primary">Create</button>
+      
+
+    <!-- end of container -->
+</div>
